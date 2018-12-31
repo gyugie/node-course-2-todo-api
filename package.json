@@ -1,0 +1,10 @@
+{
+  "name": "node-v7",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "gyugie",
+  "license": "MIT",
+  "dependencies": {
+    "mongodb": "2.2.33"
+  }
+}
