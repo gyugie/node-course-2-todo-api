@@ -11,10 +11,12 @@ var port		= 3000;
 app.use(bodyParser.json());
 
 app.post('/todos', (req,res) => {
+	//send to variable
 	var todo = new Todo({
 		text : req.body.text
 	});
 
+	//get from variable and send to database
 	todo.save().then((doc) =>{
 		res.send(doc);
 	}, (e) => {
