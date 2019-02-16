@@ -5,6 +5,9 @@
   "author": "gyugie",
   "license": "MIT",
   "dependencies": {
-    "mongodb": "2.2.33"
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "mongodb": "2.2.33",
+    "mongoose": "4.5.9"
   }
 }
