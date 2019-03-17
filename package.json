@@ -4,22 +4,23 @@
   "main": "index.js",
   "author": "gyugie",
   "license": "MIT",
-  "scripts":{
+  "scripts": {
     "start": "node server/server.js",
-    "test" : "mocha server/**/*.test.js",
+    "test": "mocha server/**/*.test.js",
     "test-watch": "nodemon --exec 'npm test'"
   },
-  "engines":{
-    "node" : "8.11.4"
+  "engines": {
+    "node": "8.11.4"
   },
   "dependencies": {
     "body-parser": "^1.18.3",
     "express": "^4.16.4",
+    "lodash": "^4.17.11",
     "mongodb": "2.2.33",
     "mongoose": "4.5.9"
   },
   "devDependencies": {
-    "expect": "^24.1.0",
+    "expect": "^24.5.0",
     "mocha": "^5.2.0",
     "supertest": "^3.4.2"
   }
