@@ -1,5 +1,6 @@
 const expect 	= require('expect');
 const request	= require('supertest');
+const _ 		= require('lodash');
 const {ObjectId}= require('mongodb');
 const {app}		= require('./../server');
 const {Todo}	= require('./../models/todo');
@@ -8,8 +9,9 @@ var todos	= [{
 	_id		: new ObjectId(),
 	"text" 	: "First test todo"
 },{
-	_id		: new ObjectId(),
-	"text"	:"Secon test todo"
+	_id				: new ObjectId(),
+	"text"			:"Secon test todo",
+	"completedAt"	: 123
 }];
 
 
