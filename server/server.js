@@ -7,7 +7,7 @@ const _				= require('lodash');
 const {ObjectID}	= require('mongodb');
 const {mongoose} 	= require('./db/mongoose.js');
 const {Todo}		= require('./models/todo');
-const {user}		= require('./models/user');
+const {User}		= require('./models/user');
 
 var app 		= express();
 var port		= process.env.PORT || 3000; 
@@ -115,6 +115,21 @@ app.patch('/todos/:id', (req, res) => {
 		res.status(400).send();
 	});
 });
+
+
+// User data
+
+app.post('/users', (req, res) => {
+	var body 	= _.pick(req.body, ['email','password']);
+	var user	= new User(body);
+
+	user.save().then((user) => {
+		res.send(user);
+	}).catch((e) => {
+		res.status(400).send(e);
+	})
+})
+
 
 app.listen(port, () =>{
 	console.log(`Started on port ${port}`);
